@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
+
+body {
+  background-color: #f4f5f6;
+  color: #333;
+  font-size: 12px;
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    sans-serif;
+}
+
+main {
+  padding-top: 150px;
+}
+
+.page-header {
+  z-index: 10;
+}
+
+.date-label > span {
+  color: #fff;
+  padding: 2px 15px;
+  height: min-content;
+  font-size: 1.5em;
+  font-weight: 350;
+}
+
+.weather1 > div {
+  vertical-align: text-top;
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  color: #fff;
+  cursor: pointer;
+  vertical-align: middle;
+  height: auto;
+}
+
+.weather1 a {
+  text-decoration: none;
+  background-color: white;
+  color: white;
+  background-color: transparent;
+}
+
+.weather1 {
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: left;
+  margin: 0;
+}
+
+.weather-country > span {
+  width: 1.5rem;
+  height: 1.5rem;
+  top: 12px;
+}
+
+.weather-country {
+  top: 12px;
+}
+
+.a {
+  color: inherit;
+  background-color: transparent;
+}
+
+.weather-cwidget {
+  color: white;
+  font-size: 15px;
+}
+
+.weather-icon {
+  vertical-align: text-top;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.menu-wrapper {
+  display: none;
+}
+
+.subscribe-label {
+  background-color: #fff;
+  padding: 2px 15px;
+  height: min-content;
+}
+
+.subscribe-label > a {
+  color: #f72210;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+.sign-in-label {
+  background-color: transparent;
+  padding: 2px 15px;
+}
+
+.sign-in-label > a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+.header-trap {
+  position: absolute;
+  right: 0;
+  width: 75px;
+  border-left: 12px solid white;
+  border-top: 13px solid #f72210;
+}
+
+.bg-red {
+  background-color: #f72210;
+}
+
+.background-white {
+  background-color: #fff;
+}
+
+.max-width-1310px {
+  max-width: 1310px;
+  min-width: 300px;
+  width: auto;
+}
+
+.header-white-logo {
+  fill: #fff;
+  width: 396px;
+  height: 60px;
+}
+
+@media (max-width: 575px) {
+  main {
+    padding-top: 60px;
+  }
+
+  .header-white-logo {
+    width: 132px;
+    height: 20px;
+  }
+
+  .date-label {
+    visibility: hidden;
+    height: 0;
+    padding: 0;
+  }
+
+  .lg-xl-navbar {
+    visibility: hidden;
+    height: 0;
+  }
+
+  .header-trap {
+    visibility: hidden;
+    height: 0;
+  }
+
+  .footer-display {
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+  }
+
+  .footer-social-networks > a {
+    margin: 10px 10px 0 0;
+    margin-left: 0;
+    margin-right: 10px;
+    color: #666;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 576px) {
+  main {
+    padding-top: 60px;
+  }
+
+  .menu-wrapper {
+    display: block;
+    padding: 2px 0 2px 15px;
+  }
+
+  .menu-wrapper > a {
+    color: #fea595;
+  }
+
+  .header-white-logo {
+    width: 132px;
+    height: 20px;
+  }
+
+  .date-label {
+    visibility: hidden;
+    height: 0;
+    padding: 0;
+  }
+
+  .lg-xl-navbar {
+    visibility: hidden;
+    height: 0;
+  }
+
+  .header-trap {
+    visibility: hidden;
+    height: 0;
+  }
+
+  .footer-display {
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+  }
+
+  .footer-social-networks > a {
+    margin: 10px 10px 0 0;
+    margin-left: 0;
+    margin-right: 10px;
+    color: #666;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  main {
+    padding-top: 60px;
+  }
+
+  .header-white-logo {
+    width: 132px;
+    height: 20px;
+  }
+
+  .date-label {
+    visibility: hidden;
+    height: 0;
+    padding: 0;
+  }
+
+  .lg-xl-navbar {
+    visibility: hidden;
+    height: 0;
+  }
+
+  .header-trap {
+    visibility: hidden;
+    height: 0;
+  }
+}
+
+#navbar {
+  list-style-type: none;
+}
+
+#navbar > li > a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.4em;
+  font-weight: 700;
+  line-height: 1;
+}
+
+#navbar > li > a:hover {
+  color: #f42;
+}
+
+#txtSearch > input {
+  width: 100px;
+  padding: 10px 0 10px 0;
+  font-size: 1.75em;
+  border: 0;
+}
+
+#txtSearch > i {
+  margin-left: -30px;
+}
