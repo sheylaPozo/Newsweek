@@ -10,7 +10,7 @@ This project is been built with bootstrap, Html 5 and CSS cloning the Newsweek w
 
 ---
 
-[Example](http://archive.ph/UzasM)
+[Example](http://archive.vn/UVGds)
 
 ### Live Demo
 
