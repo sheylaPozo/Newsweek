@@ -16,6 +16,32 @@ main {
   z-index: 10;
 }
 
+input{
+  font-size: large;
+}
+
+.see-all-label {
+  color: #000;
+}
+
+.see-all-label:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+.see-all-label > div {
+  text-align: center;
+  background-color: #f4f5f6;
+  font-size: 1.25em;
+  font-weight: 700;
+}
+
+.see-all-label:hover > div {
+  text-decoration: none;
+  color: #000;
+  background-color: #ccc;
+}
+
 .date-label > span {
   color: #fff;
   padding: 2px 15px;
@@ -123,6 +149,36 @@ a:hover {
   border-top: 13px solid #f72210;
 }
 
+.min-content-height {
+  height: min-content;
+}
+
+.title-box > h6 {
+  text-transform: uppercase;
+  color: rgba(3, 3, 3, 0.4);
+  font-size: 1.2em;
+  font-weight: 700;
+  margin: 0;
+}
+
+.title-box:hover {
+  color: rgba(3, 3, 3, 0.4);
+  text-decoration: none;
+}
+
+.n-icon {
+  display: inline-block;
+  width: 29px;
+  height: 28px;
+  background: url("https://g.newsweek.com/www/images/logo-n1.svg") center/contain no-repeat #f72210;
+  margin-right: 10px;
+}
+
+.n-icon.box-shadow {
+  border: 1px solid #fff;
+  box-shadow: 3px 3px #f72210;
+}
+
 .bg-red {
   background-color: #f72210;
 }
@@ -143,9 +199,138 @@ a:hover {
   height: 60px;
 }
 
+
+.row.itmi-category {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #f72210;
+  font-weight: 700;
+  font-size: 1.25em;
+  text-transform: uppercase;
+}
+
+.row .col-sm-12 .epick-label {
+  position: absolute;
+  padding: 5px 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #f72210;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.25em;
+  margin-top: -32px;
+}
+
+.row .col-sm-12 .featured-slideshow-label {
+  position: absolute;
+  padding: 20px 30px;
+  color: #f72210;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.25em;
+  margin-top: -52px;
+  width: 70px;
+  height: 52px;
+  background: url(https://g.newsweek.com/themes/newsweek/images/icon-slideshows-nw.png) 0 0/contain no-repeat;
+}
+
+.row .col-sm-12 .sponsored-label {
+  position: absolute;
+  padding: 5px 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #3581f4;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.25em;
+  margin-top: -32px;
+}
+
+.secondary-latest-news {
+  min-width: 135px;
+  max-width: 258px;
+  width: 40%;
+  max-height: 172px;
+}
+
+.opinion-image {
+  border-radius: 50%;
+}
+
+.itmi-image {
+  width: 100px;
+}
+
+.itmi-label {
+  background-color: #f72210;
+  color: #fff;
+  padding: 3px 7px;
+}
+
+.sm-section-link > a {
+  color: #000;
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.sm-section-link {
+  flex-wrap: wrap;
+  margin-left: 15px;
+  font-size: 1.3em;
+  line-height: 1.25;
+}
+
+.section-title {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-size: 1.5em;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-title > h6 {
+  margin: 0;
+  font-weight: 700;
+}
+
+.category-title {
+  color: #f72210;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.header-white-logo {
+  fill: #fff;
+  width: 396px;
+  height: 60px;
+}
+
+.section-heading a:hover, .category a:hover, .color-red, .related-article a:hover, .article-title a:hover, .article-label-1 {
+    color: #f72210;
+}
+
 @media (max-width: 575px) {
   main {
     padding-top: 60px;
+  }
+
+  #top_stories {
+    position: relative;
+  }
+
+  .newsletter-image {
+    width: 100%;
+    height: 150px;
+  }
+
+  .menu-wrapper {
+    display: block;
+    padding: 2px 0 2px 15px;
+  }
+
+  .menu-wrapper > a {
+    color: #fea595;
   }
 
   .header-white-logo {
@@ -188,6 +373,15 @@ a:hover {
 @media (max-width: 767px) and (min-width: 576px) {
   main {
     padding-top: 60px;
+  }
+
+  #top_stories {
+    position: relative;
+  }
+
+  .newsletter-image {
+    width: 100%;
+    height: 150px;
   }
 
   .menu-wrapper {
@@ -241,6 +435,20 @@ a:hover {
     padding-top: 60px;
   }
 
+  .newsletter-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .menu-wrapper {
+    display: block;
+    padding: 2px 0 2px 15px;
+  }
+
+  .menu-wrapper > a {
+    color: #fea595;
+  }
+
   .header-white-logo {
     width: 132px;
     height: 20px;
@@ -261,6 +469,167 @@ a:hover {
     visibility: hidden;
     height: 0;
   }
+}
+
+.top-story-link {
+  margin-top: 5px;
+}
+
+.top-story-link > a {
+  color: #000;
+  font-size: 1.75em;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.more-stories-link > a {
+  color: #000;
+  font-weight: 700;
+}
+
+.more-stories-link {
+  flex-wrap: wrap;
+  line-height: 1.25;
+  font-size: 1.25em;
+}
+
+.more-stories-description {
+  color: #000;
+  font-size: 1.25em;
+  font-weight: 100;
+  line-height: 1.25;
+}
+
+.latest-news-link {
+  flex-wrap: wrap;
+  font-size: 1.3em;
+  line-height: 1.25;
+}
+
+.latest-news-link > a {
+  color: #000;
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.opinion-link > a {
+  color: #000;
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.opinion-link {
+  flex-wrap: wrap;
+  font-size: 1.3em;
+  line-height: 1.25;
+}
+
+.opinion-author {
+  margin-top: 5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1em;
+  color: #666;
+}
+
+.section-link {
+  margin-top: 5px;
+}
+
+.section-link > a {
+  color: #000;
+  font-size: 1.75em;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.section-little-description {
+  color: #000;
+  font-size: 1.3em;
+  font-weight: 100;
+  line-height: 1.3;
+  margin-top: 5px;
+}
+
+.culture-travel-tag {
+  background-color: #c2d4d7;
+  width: min-content;
+  color: #000;
+}
+
+.update-pref > a {
+  color: #000;
+  font-weight: 700;
+  font-size: 0.9em;
+}
+
+.sm-section-link > a:hover {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 2px solid #f72210;
+}
+
+.footer-li-link > a:hover {
+  color: #000;
+}
+
+.top-story-link > a:hover {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 2px solid #f72210;
+}
+
+.more-stories-link > a:hover {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid #f72210;
+}
+
+.latest-news-link > a:hover {
+  text-decoration: none;
+  color: #f42;
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.opinion-link > a:hover {
+  color: #f42;
+  text-decoration: none;
+}
+
+.section-link > a:hover {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 2px solid #f72210;
+}
+
+.culture-travel-tag:hover {
+  background-color: #000;
+  color: #c2d4d7;
+  text-decoration: none;
+}
+
+.sign-up-gray {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.25em;
+  background-color: #666;
+  text-align: center;
+}
+
+.sign-up-gray:hover {
+  color: #fff;
+  background-color: #aaa;
+  text-decoration: none;
+}
+
+.update-pref > a:hover {
+  text-decoration: none;
+}
+
+#culture_travel_box > div {
+  background-color: #f4f5f7;
 }
 
 #navbar {
