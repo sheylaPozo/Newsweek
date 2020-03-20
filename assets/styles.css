@@ -8,6 +8,114 @@ body {
     sans-serif;
 }
 
+.logo-footer {
+  width: 200px;
+  cursor: pointer;
+  vertical-align: middle;
+  border-style: none;
+}
+
+.social {
+  cursor: pointer;
+  font-size: 12px;
+  text-align: center;
+  display: block;
+}
+
+.social > i {
+  color: grey;
+  margin-right: 8px;
+}
+
+.fab {
+  font-weight: 400;
+  font-family: "Font Awesome 5 Brands";
+ -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.footer-links {
+  margin-top: 10px;
+  color: rgb(102, 102, 102);
+}
+
+.page-footer .footer-links a {
+  display: block;
+}
+
+.page-footer.contfluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.footer-links a {
+  white-space: nowrap;
+  color: rgb(102, 102, 102);
+  text-decoration: none;
+  border-right: 1px solid rgb(217, 217, 217);
+  padding: 0px 10px;
+  font: 14px / 21px Arial, Helvetica, sans-serif;
+}
+
+.footer-general-links {
+  flex-wrap: wrap;
+}
+
+small {
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.d-fl {
+  display: flex !important;
+}
+
+.w-100 {
+  width: 100%!important;
+}
+
+.mt-3 {
+  margin-top: 1rem !important;
+}
+
+.ml-3  {
+  margin-left: 1rem!important;
+}
+
+.page-footer {
+  display: block;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: white;
+  position: relative;
+  flex-wrap: wrap;
+  line-height: 15px;
+  color: rgb(102, 102, 102) !important;
+  border-top: 1px solid rgb(217, 217, 217);
+}
+
+.cool {
+  max-width: 100%;
+  flex: 0 0 100%;
+}
+
+.liner {
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(217, 217, 217);
+}
+
+strong {
+  font-size: medium;
+}
+
 main {
   padding-top: 150px;
 }
