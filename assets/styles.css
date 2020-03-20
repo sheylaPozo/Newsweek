@@ -114,6 +114,7 @@ small {
 
 strong {
   font-size: medium;
+  cursor:default;
 }
 
 main {
