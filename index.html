@@ -30,9 +30,9 @@
     <header class="page-header">
         <div class="container-fluid max-width-1310px fixed-top">
             <div class="row bg-red">
-                <div class="col-0 col-lg-4 col-xl-4 pt-lg-4 pb-lg-3 pt-xl-4 pb-xl-3 d-flex align-items-end date-label">
-                    <div id="weather1" class="api">
-                        <a href="/weather" title="Weather" class="weather-cwidget">
+              <div class="col-0 col-lg-4 col-xl-4 pt-lg-4 pb-lg-3 pt-xl-4 pb-xl-3 d-flex date-label d-flex flex-column">
+                   <div id="weather1" class="api">
+                        <a href="/weather" title="Weather" class="weather-cwidget  ml-3">
                             <picture style="display:inherit;">
                                 <source srcset="https://g.newsweek.com/img/weather/28.webp" type="image/webp">
                                 <img src="https://g.newsweek.com/img/weather/28.png" alt="Mostly Cloudy"
@@ -2058,42 +2058,63 @@
         </section>
 
         </section>
-        <div class="newsletter-subscribe">
-            <section class="subscribe">
-                <h6 class="my-3">
-                    <div class="color-red">SUBSCRIBE</div>
-                </h6>
-                <div
-                    class="p-3 border subscribe-form d-fl flex-column flex-md-row align-items-center justify-content-center">
-                    <img class="mr-3 subscribe-img"
-                        src="https://d.newsweek.com/en/full/1569344/march-06-2020-cover.jpg?w=360&h=480&q=90&f=4af562c8ca065448c791b96a49a741b0"
-                        alt="magazine publication">
-                    <div class="d-fl flex-column align-items-center align-items-md-start">
-                        <h4>In-depth Stories You Don't See Elsewhere About Topics You Want to Read!</h4>
-                        <p>All Access + Weekly Delivery. Choose A Membership That's Perfect for You!</p>
-                        <button class="my-2 btn btn-danger">SUBSCRIBE ></button>
+        <section class="row mt-4 mb-0">
+
+            <div class="col-xl-8 col-lg-8 col-12">
+                <div class="row">
+                    <div class="col-12">
+                        <h6 class="category-title">SUBSCRIBE
+                        </h6>
                     </div>
                 </div>
-            </section>
-            <section class="newsletter">
-                <h6 class="my-3">
-                    <div class="color-red">NEWSLETTER</div>
-                </h6>
-                <div
-                    class="p-0 border newsletter-form d-fl flex-column flex-md-row align-items-center justify-content-center">
-                    <img class="w-50 mr-3" src="https://d.newsweek.com/en/full/1541302/starting5-homepage.png"
-                        alt="magazine publication">
-                    <div class="d-fl flex-column align-items-center align-items-md-start">
-                        <h4>The Starting 5</h4>
-                        <p>Take back your inbox. Sign up for our newsletter and start making sense of the world around
-                            you.</p>
-                        <button class="my-2 btn btn-danger">SIGN UP ></button>
+                <div class="background-subscribe d-flex flex-column flex-md-row flex-lg-row flex-xl-row">
+                    <div class="d-flex flex-column justify-content-center align-items-center subscribe-images">
+                        <img src="https://d.newsweek.com/en/full/1564924/february-14-2020-cover.jpg?w=170&q=95&f=c1d5601167747525a4d15e56749350ec"
+                            alt="image 1" class="subscribe-image-prev p-4">
+                        <img src="https://d.newsweek.com/en/full/1566954/february-21-28-2020-cover.jpg?w=170&q=95&f=4266076976cfcb9a853392f06c8a02c1"
+                            alt="image 2" class="subscribe-image-current p-4">
+                    </div>
+                    <div
+                        class="d-flex flex-column justify-content-center align-items-center align-items-md-start text-center text-md-left">
+                        <span class="section-link mx-3">
+                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                        </span>
+                        <span class="section-little-description mx-3">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, molestias deleniti
+                            provident sunt, iusto esse.
+                        </span>
+                        <span class="sign-in-label background-red m-3"><a href="#">SUBSCRIBE <i class="fas fa-chevron-right"></i></a></span>
                     </div>
                 </div>
-            </section>
-        </div>
-        </div>
-        <footer class="page-footer contfluid">
+            </div>
+
+            <div class="col-xl-4 col-lg-4 col-12 mt-4 mt-lg-0">
+                <div class="row">
+                    <div class="col-12">
+                        <h6 class="category-title">NEWSLETTER</h6>
+                    </div>
+                </div>
+                <div class="border d-flex flex-column flex-md-row flex-lg-row flex-xl-row">
+                    <div>
+                        <img src="https://d.newsweek.com/en/full/1541302/starting5-homepage.png" alt="image 2"
+                            class="newsletter-image">
+                    </div>
+                    <div
+                        class="d-flex flex-column justify-content-center align-items-center align-items-md-start text-center text-md-left">
+                        <span class="section-link mx-3">
+                            <a href="#">Lorem ipsum dolor sit amet.</a>
+                        </span>
+                        <span class="section-little-description mx-3">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, molestias deleniti
+                            provident sunt, iusto esse.
+                        </span>
+                        <span class="sign-in-label background-red m-3"><a href="#">SIGN UP <i class="fas fa-chevron-right"></i></a></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer contfluid">
             <div class="liner">
                 <div class="mt-3">
                     <div
