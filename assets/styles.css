@@ -237,6 +237,9 @@ a:hover {
   position: relative;
 }
 
+.redborder{
+  border-top: 4px solid #f92859;
+}
 
 .subscribe-image-prev {
   min-width: 125px;
