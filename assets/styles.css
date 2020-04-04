@@ -400,6 +400,7 @@ a:hover {
 
 .opinion-image {
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .itmi-image {
