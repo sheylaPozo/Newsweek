@@ -22,7 +22,7 @@ body {
   display: block;
 }
 
-.social > i {
+.social>i {
   color: grey;
   margin-right: 8px;
 }
@@ -30,7 +30,7 @@ body {
 .fab {
   font-weight: 400;
   font-family: "Font Awesome 5 Brands";
- -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
   display: inline-block;
   font-style: normal;
   font-variant: normal;
@@ -83,15 +83,15 @@ small {
 }
 
 .w-100 {
-  width: 100%!important;
+  width: 100% !important;
 }
 
 .mt-3 {
   margin-top: 1rem !important;
 }
 
-.ml-3  {
-  margin-left: 1rem!important;
+.ml-3 {
+  margin-left: 1rem !important;
 }
 
 .page-footer {
@@ -118,7 +118,7 @@ small {
 
 strong {
   font-size: medium;
-  cursor:default;
+  cursor: default;
 }
 
 main {
@@ -129,7 +129,7 @@ main {
   z-index: 10;
 }
 
-input{
+input {
   font-size: large;
 }
 
@@ -142,20 +142,20 @@ input{
   color: #000;
 }
 
-.see-all-label > div {
+.see-all-label>div {
   text-align: center;
   background-color: #f4f5f6;
   font-size: 1.25em;
   font-weight: 700;
 }
 
-.see-all-label:hover > div {
+.see-all-label:hover>div {
   text-decoration: none;
   color: #000;
   background-color: #ccc;
 }
 
-.date-label > span {
+.date-label>span {
   color: #fff;
   padding: 2px 15px;
   height: min-content;
@@ -163,7 +163,7 @@ input{
   font-weight: 350;
 }
 
-.weather1 > div {
+.weather1>div {
   vertical-align: text-top;
   box-sizing: border-box;
   width: 24px;
@@ -190,7 +190,7 @@ input{
   margin: 0;
 }
 
-.weather-country > span {
+.weather-country>span {
   width: 1.5rem;
   height: 1.5rem;
   top: 12px;
@@ -237,7 +237,7 @@ a:hover {
   position: relative;
 }
 
-.redborder{
+.redborder {
   border-top: 4px solid #f92859;
 }
 
@@ -262,7 +262,7 @@ a:hover {
   background-color: #f4f5f6;
 }
 
-.subscribe-label > a {
+.subscribe-label>a {
   color: #f72210;
   text-decoration: none;
   font-weight: 700;
@@ -275,7 +275,7 @@ a:hover {
   padding: 2px 15px;
 }
 
-.sign-in-label > a {
+.sign-in-label>a {
   color: #fff;
   text-decoration: none;
   font-weight: 700;
@@ -295,7 +295,7 @@ a:hover {
   height: min-content;
 }
 
-.title-box > h6 {
+.title-box>h6 {
   text-transform: uppercase;
   color: rgba(3, 3, 3, 0.4);
   font-size: 1.2em;
@@ -413,7 +413,7 @@ a:hover {
   padding: 3px 7px;
 }
 
-.sm-section-link > a {
+.sm-section-link>a {
   color: #000;
   font-size: 1em;
   font-weight: 700;
@@ -437,7 +437,7 @@ a:hover {
   justify-content: center;
 }
 
-.section-title > h6 {
+.section-title>h6 {
   margin: 0;
   font-weight: 700;
 }
@@ -454,8 +454,13 @@ a:hover {
   height: 60px;
 }
 
-.section-heading a:hover, .category a:hover, .color-red, .related-article a:hover, .article-title a:hover, .article-label-1 {
-    color: #f72210;
+.section-heading a:hover,
+.category a:hover,
+.color-red,
+.related-article a:hover,
+.article-title a:hover,
+.article-label-1 {
+  color: #f72210;
 }
 
 @media (max-width: 575px) {
@@ -477,7 +482,7 @@ a:hover {
     padding: 2px 0 2px 15px;
   }
 
-  .menu-wrapper > a {
+  .menu-wrapper>a {
     color: #fea595;
   }
 
@@ -510,7 +515,7 @@ a:hover {
     padding-bottom: 10px;
   }
 
-  .footer-social-networks > a {
+  .footer-social-networks>a {
     margin: 10px 10px 0 0;
     margin-left: 0;
     margin-right: 10px;
@@ -537,7 +542,7 @@ a:hover {
     padding: 2px 0 2px 15px;
   }
 
-  .menu-wrapper > a {
+  .menu-wrapper>a {
     color: #fea595;
   }
 
@@ -570,7 +575,7 @@ a:hover {
     padding-bottom: 10px;
   }
 
-  .footer-social-networks > a {
+  .footer-social-networks>a {
     margin: 10px 10px 0 0;
     margin-left: 0;
     margin-right: 10px;
@@ -593,7 +598,7 @@ a:hover {
     padding: 2px 0 2px 15px;
   }
 
-  .menu-wrapper > a {
+  .menu-wrapper>a {
     color: #fea595;
   }
 
@@ -623,14 +628,14 @@ a:hover {
   margin-top: 5px;
 }
 
-.top-story-link > a {
+.top-story-link>a {
   color: #000;
   font-size: 1.75em;
   font-weight: 700;
   line-height: 1;
 }
 
-.more-stories-link > a {
+.more-stories-link>a {
   color: #000;
   font-weight: 700;
 }
@@ -654,13 +659,13 @@ a:hover {
   line-height: 1.25;
 }
 
-.latest-news-link > a {
+.latest-news-link>a {
   color: #000;
   font-size: 1em;
   font-weight: 700;
 }
 
-.opinion-link > a {
+.opinion-link>a {
   color: #000;
   font-size: 1em;
   font-weight: 700;
@@ -685,7 +690,7 @@ a:hover {
   margin-top: 5px;
 }
 
-.section-link > a {
+.section-link>a {
   color: #000;
   font-size: 1.75em;
   font-weight: 700;
@@ -706,47 +711,47 @@ a:hover {
   color: #000;
 }
 
-.update-pref > a {
+.update-pref>a {
   color: #000;
   font-weight: 700;
   font-size: 0.9em;
 }
 
-.sm-section-link > a:hover {
+.sm-section-link>a:hover {
   color: #000;
   text-decoration: none;
   border-bottom: 2px solid #f72210;
 }
 
-.footer-li-link > a:hover {
+.footer-li-link>a:hover {
   color: #000;
 }
 
-.top-story-link > a:hover {
+.top-story-link>a:hover {
   color: #000;
   text-decoration: none;
   border-bottom: 2px solid #f72210;
 }
 
-.more-stories-link > a:hover {
+.more-stories-link>a:hover {
   color: #000;
   text-decoration: none;
   border-bottom: 1px solid #f72210;
 }
 
-.latest-news-link > a:hover {
+.latest-news-link>a:hover {
   text-decoration: none;
   color: #f42;
   font-size: 1em;
   font-weight: 700;
 }
 
-.opinion-link > a:hover {
+.opinion-link>a:hover {
   color: #f42;
   text-decoration: none;
 }
 
-.section-link > a:hover {
+.section-link>a:hover {
   color: #000;
   text-decoration: none;
   border-bottom: 2px solid #f72210;
@@ -772,11 +777,11 @@ a:hover {
   text-decoration: none;
 }
 
-.update-pref > a:hover {
+.update-pref>a:hover {
   text-decoration: none;
 }
 
-#culture_travel_box > div {
+#culture_travel_box>div {
   background-color: #f4f5f7;
 }
 
@@ -784,7 +789,7 @@ a:hover {
   list-style-type: none;
 }
 
-#navbar > li > a {
+#navbar>li>a {
   text-decoration: none;
   color: #000;
   font-size: 1.4em;
@@ -792,17 +797,17 @@ a:hover {
   line-height: 1;
 }
 
-#navbar > li > a:hover {
+#navbar>li>a:hover {
   color: #f42;
 }
 
-#txtSearch > input {
+#txtSearch>input {
   width: 100px;
   padding: 10px 0 10px 0;
   font-size: 1.75em;
   border: 0;
 }
 
-#txtSearch > i {
+#txtSearch>i {
   margin-left: -30px;
 }
