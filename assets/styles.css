@@ -8,6 +8,17 @@ body {
     sans-serif;
 }
 
+#txtSearch > input {
+  width: 100px;
+  padding: 10px 0 10px 0;
+  font-size: 1.75em;
+  border: 0;
+}
+
+#txtSearch > i {
+  margin-left: -30px;
+}
+
 .logo-footer {
   width: 200px;
   cursor: pointer;
@@ -804,13 +815,3 @@ a:hover {
   color: #f42;
 }
 
-#txtSearch > input {
-  width: 100px;
-  padding: 10px 0 10px 0;
-  font-size: 1.75em;
-  border: 0;
-}
-
-#txtSearch > i {
-  margin-left: -30px;
-}
