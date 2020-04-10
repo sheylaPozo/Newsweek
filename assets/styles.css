@@ -15,10 +15,6 @@ body {
   border: 0;
 }
 
-#txtSearch > i {
-  margin-left: -30px;
-}
-
 .logo-footer {
   width: 200px;
   cursor: pointer;
