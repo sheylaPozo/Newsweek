@@ -14,7 +14,7 @@ This project is been built with bootstrap, Html 5 and CSS cloning the Newsweek w
 
 ### Live Demo
 
-[newsweek-clone](https://sheylapozo.github.io/Nwsweek/.)
+[newsweek-clone](https://github.com/sheylaPozo/Newsweek)
 
 ---
 
