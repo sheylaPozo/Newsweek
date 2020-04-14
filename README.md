@@ -10,8 +10,8 @@ This project is been built with bootstrap, Html 5 and CSS cloning the Newsweek w
 
 ---
 
-*Photo Preview*
-!![Demo](https://user-images.githubusercontent.com/54015740/79272885-aef14480-7e67-11ea-9742-4332d6586136.png)
+
+!![Demo](https://github.com/sheylaPozo/Newsweek/issues/6#issue-599851093)
 
 
 -------
