@@ -10,6 +10,12 @@ This project is been built with bootstrap, Html 5 and CSS cloning the Newsweek w
 
 ---
 
+*Demo photo Preview*
+!![Demo](https://user-images.githubusercontent.com/54015740/79272885-aef14480-7e67-11ea-9742-4332d6586136.png)
+
+
+-------
+
 [Example](http://archive.vn/VF9h9)
 
 ### Live Demo
