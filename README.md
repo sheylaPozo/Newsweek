@@ -9,7 +9,7 @@ This project is been built with bootstrap, Html 5 and CSS cloning the Newsweek w
 - BOOTSTRAP
 
 ---
-*Image Preview ♥*
+*💛 Image Preview 💛 *
 
 ![DEMO](https://user-images.githubusercontent.com/54015740/79274670-87e84200-7e6a-11ea-8e72-a70a243ca3ba.png)
 
