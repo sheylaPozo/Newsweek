@@ -1,6 +1,6 @@
 # Newsweek clone
 
-This project is been built with bootstrap, Html 5 and CSS cloning the Newsweek website, and making it responsive.
+This project is been built with bootstrap, Html 5 and CSS cloning the Newsweek website, and making it responsive for the different screen sizes to open it at.
 
 ## BUILT WITH
 
