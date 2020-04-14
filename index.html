@@ -1,11 +1,2044 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Newsweek-clone</title>
+    <meta charset="UTF-8" />
+
+    <meta name="author" content="Sheyla Pozo" />
+
+    <meta name="keywords" content="news, bootstrap, html, css, microverse, web developement" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+        integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous" />
+
+    <link rel="icon" type="image/png" href="https://g.newsweek.com/themes/newsweek/favicons/favicon-32x32.png"
+        sizes="32x32" />
+
+    <link rel="stylesheet" href="assets/styles.css" />
+
+    <title>Newsweek - News, Analysis, Politics, Business, Technology</title> 
 </head>
+
 <body>
-    
+    <header class="page-header">
+        <nav class="container-fluid max-width-1310px fixed-top">
+            <div class="row bg-red">
+                <div
+                    class="col-0 col-lg-4 col-xl-4 pt-lg-4 pb-lg-3 pt-xl-4 pb-xl-3 d-flex date-label d-flex flex-column">
+                    <div id="weather1" class="api">
+                        <a href="/weather" title="Weather" class="weather-cwidget  ml-3">
+                            <picture style="display:inherit;">
+                            <source srcset="https://g.newsweek.com/img/weather/28.webp" type="image/webp">
+                            <img src="https://g.newsweek.com/img/weather/28.png" alt="Mostly Cloudy"
+                                    class="weather-icon">
+                            </picture>&nbsp;&nbsp;24°<span class="weather-country">Tacna, PE&nbsp;&nbsp;<picture
+                                    style="display:inherit;">
+                            <source srcset="https://g.newsweek.com/img/weather/ic-white-arrow.webp"
+                                        type="image/webp">
+                            <img src="https://g.newsweek.com/img/weather/ic-white-arrow.png" alt="weather arrow"
+                                    class="weather-arrow">
+                            </picture>
+                            </span>
+                            <h1 class="hidden">1111</h1>
+                        </a>
+                    </div>
+                    <span>Fri, Apr 03, 2020</span>
+                </div>
+                <div class="col-4 col-lg-4 col-xl-4 pt-4 pb-3 d-flex">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px" y="0px" viewBox="0 0 395.6 60" xml:space="preserve" class="header-white-logo">
+                        <g>
+                            <path
+                                d="M58.7,10.8h-5.6v48.3H42.8l-25.1-33v22.1h5.6v10.8H0V48.3h5.6V10.8H0V0h17.6L41,30.7V10.8h-5.6V0h23.2	L58.7,10.8L58.7,10.8z M95.8,38c0,0.9,0,1.8-0.1,2.7H70.3c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11	c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6C89.9,16.3,95.8,25.6,95.8,38 M159,27.3h-3.7	l-9.4,31.8h-12.5l-5.9-17.4l-5.3,17.4h-12.8L98.8,27.4h-3.7V16.6h22.1v10.7h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.6l5-16.9h-5.6V16.6	H159L159,27.3L159,27.3z M174.5,27.8c0,1.5,1.2,2.5,5.4,3.9l6,2c5.5,1.8,12.1,5.9,12.1,13.4c0,8.8-6.6,13-14.7,13	c-6.5,0-11.5-3.2-12.9-4.6V59h-10.8V44.4h10.6c0.3,4.8,4.6,7.3,8.5,7.3c3.2,0,4.7-1.4,4.7-3c0-2-1.2-3.1-6.5-4.8l-5.3-1.8	c-5.4-1.7-11.4-5.7-11.4-12.8c0-8.7,7.7-13.1,14.3-13.1c6.8,0,10.1,1.9,11.8,3.8l0.1-3.3H197v13.3h-11.2c-0.2-3.6-3.7-5.2-7.2-5.2	C175.8,24.8,174.5,26.1,174.5,27.8 M262.8,27.3h-3.7l-9.4,31.8h-12.5l-5.9-17.4L226,59.1h-12.8l-10.6-31.7h-3.7V16.6h22.1v10.7	h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.7l5-16.9h-5.6V16.6h18.5V27.3z M302,37.9c0,0.9,0,1.8-0.1,2.7h-25.4	c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1	c0-10.5,7-21.6,21-21.6C296.1,16.2,302,25.5,302,37.9 M343.9,37.8c0,0.9,0,1.8-0.1,2.7h-25.4c-0.7,8.2,2.4,10.6,7.1,10.6	c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6	C338,16.1,343.9,25.4,343.9,37.8 M389.9,59h-12.8l-13.3-17.3l-4.3,3.2v3.4h3.8V59h-19.6V48.3h3.7V10.6h-5.6V0h17.8v33.9l8.9-6.5	h-5.6V16.6h23.9v10.8h-3.7l-9.3,7l10.7,13.9h5.6L389.9,59L389.9,59z M395.6,56.6c0,0.5-0.1,0.9-0.4,1.2c-0.2,0.4-0.5,0.7-0.9,0.9	c-0.4,0.2-0.8,0.4-1.3,0.4c-0.5,0-0.9-0.1-1.2-0.4c-0.4-0.2-0.7-0.5-0.9-0.9c-0.2-0.4-0.4-0.8-0.4-1.2c0-0.5,0.1-0.9,0.4-1.2	c0.2-0.4,0.5-0.7,0.9-0.9c0.4-0.2,0.8-0.4,1.2-0.4c0.5,0,0.9,0.1,1.3,0.4c0.4,0.2,0.7,0.5,0.9,0.9	C395.5,55.8,395.6,56.2,395.6,56.6 M394.6,58c0.4-0.4,0.6-0.9,0.6-1.4c0-0.6-0.2-1-0.6-1.4s-0.9-0.6-1.4-0.6s-1,0.2-1.4,0.6	c-0.4,0.4-0.6,0.9-0.6,1.4c0,0.6,0.2,1,0.6,1.4c0.4,0.4,0.9,0.6,1.4,0.6S394.2,58.4,394.6,58 M393.6,56.8c0.1,0.1,0.2,0.1,0.2,0.1	c0.1,0.1,0.2,0.2,0.2,0.3c0,0,0.2,0.3,0.4,0.8h-0.8c-0.3-0.5-0.4-0.8-0.5-0.9c-0.1-0.1-0.2-0.2-0.3-0.2c0,0-0.1,0-0.1,0v1.1h-0.6	v-2.6h1.2c0.4,0,0.6,0.1,0.7,0.2c0.2,0.2,0.2,0.3,0.2,0.6c0,0.2-0.1,0.4-0.2,0.5C393.9,56.6,393.8,56.7,393.6,56.8 M393.5,56.3	c0.1-0.1,0.1-0.2,0.1-0.3s-0.1-0.2-0.1-0.3c-0.1-0.1-0.2-0.1-0.4-0.1h-0.3v0.7h0.3C393.3,56.4,393.4,56.4,393.5,56.3 M318.4,33.5	h13.9c0-6-3.9-8.4-6.8-8.4C322.1,25.2,318.6,27.9,318.4,33.5 M276.5,33.6h13.9c0-6-3.9-8.4-6.8-8.4C280.3,25.2,276.8,28,276.5,33.6 M70.3,33.7h13.9c0-6-3.9-8.4-6.8-8.4C74.1,25.3,70.6,28.1,70.3,33.7">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="col-8 col-lg-4 col-xl-4 pt-4 pb-3 d-flex justify-content-end align-items-end">
+                    <span class="sign-in-label"><a href="#">SIGN IN</a></span>
+                    <span class="subscribe-label">
+                        <a href="#">SUBSCRIBE <i class="fas fa-chevron-right"></i></a>
+                    </span>
+                    <span class="menu-wrapper">
+                        <a href="#"><i class="fas fa-bars fa-2x"></i></a></span>
+                </div>
+            </div>
+        <nav class="row my-auto border-bottom d-flex flex-wrap background-white lg-xl-navbar">
+            <div class="col-12 d-flex flex-row">
+                <div class="header-trap"></div>
+                <ul id="navbar" class="d-flex flex-wrap mt-3 pl-1">
+                    <li><a href="https://www.newsweek.com/us" class="px-2 mr-2">U.S.</a></li>
+                    <li><a href="https://www.newsweek.com/world" class="px-2 mx-2 border-left">World</a></li>
+                    <li><a href="https://www.newsweek.com/business" class="px-2 mx-2 border-left">Business</a></li>
+                    <li><a href="https://www.newsweek.com/tech-science" class="px-2 mx-2 border-left">Tech &amp; Science</a></li>
+                    <li><a href="https://www.newsweek.com/culture" class="px-2 mx-2 border-left">Culture</a></li>
+                    <li><a href="https://www.newsweek.com/newsgeek" class="px-2 mx-2 border-left">Newsgeek</a></li>
+                    <li><a href="https://www.newsweek.com/sports" class="px-2 mx-2 border-left">Sports</a></li>
+                    <li><a href="https://www.newsweek.com/health" class="px-2 mx-2 border-left">Health</a></li>
+                    <li><a href="https://www.newsweek.com/the-debate" class="px-2 mx-2 border-left">The Debate</a></li>
+                    <li><a href="https://www.newsweek.com/vantage" class="px-2 mx-2 border-left">Vantage</a></li>
+                    <li><a href="https://www.newsweek.com/weather" class="px-2 ml-2 border-left">Weather</a></li>
+                </ul>
+                <div id="txtSearch" class="my-auto">
+                    <input type="text" placeholder="Search">
+                    <i class="fas fa-search fa-2x"></i>
+                </div>
+            </div>   
+        </nav>
+        </nav>
+    </header>
+    <main class="container-fluid max-width-1310px background-white">
+        <section class="row">
+            <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12 order-md-3 order-sm-3 order-1">
+                <div class="row">
+                    <div
+                        class="col-lg-5 col-md-6 col-sm-12 col-xs-12 order-md-1 order-sm-2 order-2 pr-md-4 min-content-height">
+                        <div id="feature_stories_box">
+                            <div class="row">
+                                <div class="col-sm-12 mt-4">
+                                    <a href="#" class="title-box">
+                                        <h6>FEATURED STORIES</h6>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 mt-2">
+                                    <img src="https://d.newsweek.com/en/full/1577139/closed-chicago-theatre-seen-chicago-illinois-march-21-2020.jpg?w=397&amp;h=265&amp;q=90&amp;f=a1738cc3e69b02e03597553cf6d8ee3b"
+                                        alt="Closed Chicago Theatre is seen in Chicago, Illinois, on March 21, 2020." class="w-100">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <span class="epick-label">U.S.</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="section-link">
+                                                <a href="#">U.S. Death Toll Hits 1,300, Nearly Half of America Now in Lockdown</a>
+                                            </div>
+                                            <div class="section-little-description">
+                                                At least 22 states have issued a "stay at home" order, while disaster declarations have been made in several more states, including New Jersey, Maryland, Illinois and Missouri.
+                                            </div>
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 mt-3">
+                                    <img src="https://d.newsweek.com/en/full/1579130/amazon.jpg?w=397&amp;h=265&amp;q=90&amp;f=96bd3ecdd2d94575d7d1c21b0cc56171"
+                                        alt="image 1" class="w-100">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <span class="epick-label">NEWS</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="section-link">
+                                                <a href="#">Amazon Tried to Work With Virus Test-Makers to Screen Employees: Report</a>
+                                            </div>
+                                            <div class="section-little-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla unde nam, enim ab deserunt at voluptates, omnis maiores praesentium ipsa et sint magni pariatur. Repellat beatae doloremque odit earum minima.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 mt-3">
+                                    <img src="https://d.newsweek.com/en/full/1579088/science-lab.jpg?w=397&amp;h=265&amp;l=0&amp;t=0&amp;q=90&amp;f=ea9bda125e861e898088e2f7a6c889d5"
+                                        alt="image 1" class="w-100">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <span class="epick-label">NEWS</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="section-link">
+                                                <a href="#">Anti-Parasite Drug May Help Stop Coronavirus, New Study Says</a>
+                                            </div>
+                                            <div class="section-little-description"> A study published Friday finds the the common anti-parasite drug Ivermectin can stop the virus that causes COVID-19 from multiplying in a laboratory setting.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 mt-3">
+                                    <img src="https://d.newsweek.com/en/full/1579137/bill-withers.jpg?w=397&amp;h=265&amp;q=90&amp;f=bec7f69502e695923577f07d509e3932"
+                                        alt="image 1" class="w-100">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <span class="epick-label">CULTURE</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="section-link">
+                                                <a href="#">Justin Timberlake, Michelle Obama Pay Tribute to the Late Bill Withers</a>
+                                            </div>
+                                            <div class="section-little-description"> The "Lean on Me" and "Ain't No Sunshine" singer died earlier this week.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="sponsored_insight_box_1">
+                            <div class="row justify-content-center">
+                                <div class="col-12 col-md-9 col-lg-12 mt-4">
+                                    <img src="https://d.newsweek.com/en/full/1578860/sbf-photo-2.jpg"
+                                        alt="image 1" class="w-100">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <span class="sponsored-label">sponsored insight</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="border p-3">
+                                                <div class="section-link">
+                                                    <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing
+                                                        elit.</a>
+                                                </div>
+                                                <div class="section-little-description">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
+                                                    molestias
+                                                    deleniti
+                                                    provident sunt, iusto esse, velit totam eum accusamus beatae fugit
+                                                    facere
+                                                    adipisci.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-9 col-lg-12 mt-3">
+                                    <img src="https://d.newsweek.com/en/full/1567276/synergy-executive.png"
+                                        alt="image 2" class="w-100">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <span class="sponsored-label">sponsored insight</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="border p-3">
+                                                <div class="section-link">
+                                                    <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing
+                                                        elit.</a>
+                                                </div>
+                                                <div class="section-little-description">Lorem ipsum, dolor sit amet
+                                                    consectetur adipisicing elit. Porro molestiae cumque, pariatur et
+                                                    iure libero voluptatum eos corrupti vel natus, sint ipsa officia
+                                                    beatae architecto ea deserunt velit! Tempora, temporibus.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-9 col-lg-12 mt-3">
+                                    <img src="https://d.newsweek.com/en/full/1575945/cybersecurity-vantage-hp-sponsor.jpg"
+                                        alt="image 3" class="w-100">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <span class="sponsored-label">sponsored insight</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="border p-3">
+                                                <div class="section-link">
+                                                    <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing
+                                                        elit.</a>
+                                                </div>
+                                                <div class="section-little-description">Lorem, ipsum dolor sit amet
+                                                    consectetur adipisicing elit. Id accusantium saepe officia quia non
+                                                    incidunt laboriosam assumenda consectetur aliquam magnam provident,
+                                                    eius autem obcaecati sit placeat ducimus corrupti nemo iure!
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-9 col-lg-12 mt-3">
+                                    <img src="https://d.newsweek.com/en/full/1571226/guest-house-oscala.jpg"
+                                        alt="image 4" class="w-100">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <span class="sponsored-label">sponsored insight</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="border p-3">
+                                          <div class="section-link">
+                                                    <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing
+                                                        elit.</a>
+                                                </div>
+                                                <div class="section-little-description">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
+                                                    molestias
+                                                    deleniti
+                                                    provident sunt, iusto esse, velit totam eum accusamus beatae fugit
+                                                    facere
+                                                    adipisci.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-9 col-lg-12 mt-3">
+                                    <img src="https://d.newsweek.com/en/full/1564804/nw-kobe-sponsor.jpg?w=343&h=229&f=2bf6ea01c89023be1dac2c9aef3c1412"
+                                        alt="image 1" class="w-100">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <span class="sponsored-label">sponsored insight</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="border p-3">
+                                                <div class="section-link">
+                                                    <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing
+                                                        elit.</a>
+                                                </div>
+                                                <div class="section-little-description"> Lorem ipsum dolor sit amet
+                                                    consectetur adipisicing elit. Magni,
+                                                    molestias deleniti provident sunt, iusto esse, velit totam eum
+                                                    accusamus beatae fugit facere adipisci.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="top_stories"
+                        class="col-lg-7 col-md-6 col-sm-12 col-xs-12 order-md-2 order-sm-1 order-1 pl-md-0 mx-lg-0 mx-xl-0 min-content-height sticky-top">
+                        <div class="row">
+                            <div class="col-12 order-md-1 order-sm-1 order-1">
+                                <div class="row">
+                                    <div class="col-sm-12 mt-4">
+                                        <a href="#" class="title-box">
+                                            <h6>TOP STORY</h6>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 mt-2">
+                                        <img src="https://d.newsweek.com/en/full/1576099/coronavirus-stimulus-package-includes-demands-democrats.jpg?w=591&amp;h=364&amp;f=16ea3f98025b6b63cd77b2a36b07450e"
+                                            alt="coronavirus stimulus package includes demands by Democrats" class="w-100">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <span class="epick-label">U.S.</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="top-story-link">
+                                                    <a href="#">Coronavirus Stimulus to Include Marshall Plan for Hospitals, More Oversight</a>
+                                                </div>
+                                                <div class="section-little-description">
+                                                    The two provisions are some of Democrats' most important demands for the nearly $2 trillion plan to combat an ecnomic downturn from the ongoing pandemic.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="culture_travel_box" class="col-12 mt-4 order-md-2 order-sm-3 order-3">
+                                <div>
+                                    <div class="row">
+                                        <div class="col-12 my-2 mx-sm-2 mx-lg-2 mx-xl-2">
+                                            <a href="#" class="title-box">
+                                                <h6>CULTURE & TRAVEL</h6>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-6 col-lg-6 col-md-6">
+                                            <img src="https://d.newsweek.com/en/full/1552293/cul-map-underwater-banner.webp?w=397&h=265&f=556690dba11324f197a04f43aadde8fa"
+                                                alt="image 1" class="w-100">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="pt-2 pb-3 px-3 mb-3">
+                                                        <div class="section-link">
+                                                            <a href="#">Lorem ipsum dolor sit amet consectetur
+                                                                adipisicing
+                                                                elit.</a>
+                                                        </div>
+                                                        <div class="section-little-description mb-2">
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                            Magni,
+                                                            molestias
+                                                            deleniti
+                                                            provident sunt, iusto esse, velit totam eum accusamus beatae
+                                                            fugit
+                                                            facere
+                                                            adipisci.
+                                                        </div>
+                                                        <a href="#" class="culture-travel-tag px-2 py-1">label tag</a>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6">
+                                            <img src="https://d.newsweek.com/en/full/1542818/vineyard-remy-martin.webp?w=397&h=265&f=d9d3a493c4818bedce1a45fc03bbab38"
+                                                alt="image 1" class="w-100">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="pt-2 pb-3 px-3 mb-3">
+                                                        <div class="section-link">
+                                                            <a href="#">Lorem ipsum dolor sit amet consectetur
+                                                                adipisicing
+                                                                elit.</a>
+                                                        </div>
+                                                        <div class="section-little-description mb-2">
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                            Magni,
+                                                            molestias
+                                                            deleniti
+                                                            provident sunt, iusto esse, velit totam eum accusamus beatae
+                                                            fugit
+                                                            facere
+                                                            adipisci.
+                                                        </div>
+                                                        <a href="#" class="culture-travel-tag px-2 py-1">label tag</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6">
+                                            <img src="https://d.newsweek.com/en/full/1564962/cul-map-undergroundsubways-09-91029419.webp?w=397&h=265&f=c75ea7fe40bca26ffbb19f21fccf1054"
+                                                alt="image 1" class="w-100">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="pt-2 pb-3 px-3 mb-3">
+                                                        <div class="section-link">
+                                                            <a href="#">Lorem ipsum dolor sit amet consectetur
+                                                                adipisicing
+                                                                elit.</a>
+                                                        </div>
+                                                        <div class="section-little-description mb-2">
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                            Magni,
+                                                            molestias
+                                                            deleniti
+                                                            provident sunt, iusto esse, velit totam eum accusamus beatae
+                                                            fugit
+                                                            facere
+                                                            adipisci.
+                                                        </div>
+                                                        <a href="#" class="culture-travel-tag px-2 py-1">label tag</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6">
+                                            <img src="https://d.newsweek.com/en/full/1556716/twa-hotel.webp?w=397&h=265&f=7af1ce5444b4a2b638b278b6207aeb3a"
+                                                alt="image 1" class="w-100">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="pt-2 pb-3 px-3 mb-3">
+                                                        <div class="section-link">
+                                                            <a href="#">Lorem ipsum dolor sit amet consectetur
+                                                                adipisicing
+                                                                elit.</a>
+                                                        </div>
+                                                        <div class="section-little-description mb-2">
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                            Magni,
+                                                            molestias
+                                                            deleniti
+                                                            provident sunt, iusto esse, velit totam eum accusamus beatae
+                                                            fugit
+                                                            facere
+                                                            adipisci.
+                                                        </div>
+                                                        <a href="#" class="culture-travel-tag px-2 py-1">label tag</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="more_stories_box" class="col-12 order-md-3 order-sm-2 order-2">
+                                <div class="row">
+                                    <div class="col-12 mt-4">
+                                        <a href="#" class="title-box">
+                                            <h6>MORE STORIES</h6>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-5 col-6 py-0 mt-2">
+                                        <img src="https://d.newsweek.com/en/full/1567628/chinese-children.webp?w=135&h=90&f=18b61c3b47f929d8781ac838aa40a225"
+                                            alt="" class="w-100">
+                                    </div>
+                                    <div class="col-xl-9 col-lg-8 col-md-8 col-sm-7 col-6 pl-0 mt-2">
+                                        <div class="d-flex flex-column text-justify">
+                                            <span class="more-stories-link">
+                                                <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                                            </span>
+                                            <span class="more-stories-description mt-2">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
+                                                molestias
+                                                deleniti provident sunt, iusto esse.
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <hr class="my-2 border border-top-0">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-5 col-6 py-0">
+                                        <img src="https://d.newsweek.com/en/full/1567654/border-patrol.webp?w=135&h=90&f=52ebd86fedf8d010ff0d855531b17fd9"
+                                            alt="" class="w-100">
+                                    </div>
+                                    <div class="col-xl-9 col-lg-8 col-md-8 col-sm-7 col-6 pl-0">
+                                        <div class="d-flex flex-column text-justify">
+                                            <span class="more-stories-link">
+                                                <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                                            </span>
+                                            <span class="more-stories-description mt-2">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
+                                                molestias
+                                                deleniti provident sunt, iusto esse.
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <hr class="my-2 border border-top-0">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-5 col-6 py-0">
+                                        <img src="https://d.newsweek.com/en/full/1567651/bill-taylor-donald-trump-ukraine-server-conspiracy.webp?w=135&h=90&f=ee8945451ba4e22d03b9ba6c2ddcd49b"
+                                            alt="" class="w-100">
+                                    </div>
+                                    <div class="col-xl-9 col-lg-8 col-md-8 col-sm-7 col-6 pl-0">
+                                        <div class="d-flex flex-column text-justify">
+                                            <span class="more-stories-link">
+                                                <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                                            </span>
+                                            <span class="more-stories-description mt-2">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
+                                                molestias
+                                                deleniti provident sunt, iusto esse.
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <hr class="my-2 border border-top-0">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-5 col-6 py-0">
+                                        <img src="https://d.newsweek.com/en/full/1567645/mike-bloomberg-tennessee.webp?w=135&h=90&f=a8a2d38307509783d97d162d1f4aceb4"
+                                            alt="" class="w-100">
+                                    </div>
+                                    <div class="col-xl-9 col-lg-8 col-md-8 col-sm-7 col-6 pl-0">
+                                        <div class="d-flex flex-column text-justify">
+                                            <span class="more-stories-link">
+                                                <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                                            </span>
+                                            <span class="more-stories-description mt-2">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
+                                                molestias
+                                                deleniti provident sunt, iusto esse.
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <hr class="my-2 border border-top-0">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-5 col-6 py-0">
+                                        <img src="https://d.newsweek.com/en/full/1567623/donald-trump-jr-nh-rally.webp?w=135&h=90&l=50&t=50&f=d8747cc62f3bb762c7f05cfbe66d6eb5"
+                                            alt="" class="w-100">
+                                    </div>
+                                    <div class="col-xl-9 col-lg-8 col-md-8 col-sm-7 col-6 pl-0">
+                                        <div class="d-flex flex-column text-justify">
+                                            <span class="more-stories-link">
+                                                <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                                            </span>
+                                            <span class="more-stories-description mt-2">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
+                                                molestias
+                                                deleniti provident sunt, iusto esse.
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <hr class="my-2 border border-top-0">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-5 col-6 py-0">
+                                        <img src="https://d.newsweek.com/en/full/1567609/bernie-sanders.webp?w=135&h=90&f=ff61c995d064bfdee026bdb0bcbcff71"
+                                            alt="" class="w-100">
+                                    </div>
+                                    <div class="col-xl-9 col-lg-8 col-md-8 col-sm-7 col-6 pl-0">
+                                        <div class="d-flex flex-column text-justify">
+                                            <span class="more-stories-link">
+                                                <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                                            </span>
+                                            <span class="more-stories-description mt-2">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
+                                                molestias
+                                                deleniti provident sunt, iusto esse.
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <hr class="my-2 border border-top-0">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-5 col-6 py-0">
+                                        <img src="https://d.newsweek.com/en/full/1567606/afghanistan-peace-deal-taliban-february-finalized-signed.webp?w=135&h=90&f=bfeeb24c658158923fda26d068aafab1"
+                                            alt="" class="w-100">
+                                    </div>
+                                    <div class="col-xl-9 col-lg-8 col-md-8 col-sm-7 col-6 pl-0">
+                                        <div class="d-flex flex-column text-justify">
+                                            <span class="more-stories-link">
+                                                <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                                            </span>
+                                            <span class="more-stories-description mt-2">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
+                                                molestias
+                                                deleniti provident sunt, iusto esse.
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <hr class="my-2 border border-top-0">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-5 col-6 py-0">
+                                        <img src="https://d.newsweek.com/en/full/1567245/joe-biden-bernie-sanders-2020-polls.webp?w=135&h=90&f=ba1e469a891666a5ea7715083f780afb"
+                                            alt="" class="w-100">
+                                    </div>
+                                    <div class="col-xl-9 col-lg-8 col-md-8 col-sm-7 col-6 pl-0">
+                                        <div class="d-flex flex-column text-justify">
+                                            <span class="more-stories-link">
+                                                <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                                            </span>
+                                            <span class="more-stories-description mt-2">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
+                                                molestias
+                                                deleniti provident sunt, iusto esse.
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <hr class="my-2 border border-top-0">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-5 col-6 py-0">
+                                        <img src="https://d.newsweek.com/en/full/1567538/rudy-giuliani-mike-bloomberg.webp?w=135&h=90&f=e5a1dc1befa1c7c75e0690562ad49b2f"
+                                            alt="" class="w-100">
+                                    </div>
+                                    <div class="col-xl-9 col-lg-8 col-md-8 col-sm-7 col-6 pl-0">
+                                        <div class="d-flex flex-column text-justify">
+                                            <span class="more-stories-link">
+                                                <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                                            </span>
+                                            <span class="more-stories-description mt-2">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
+                                                molestias
+                                                deleniti provident sunt, iusto esse.
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <hr class="my-2 border border-top-0">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-5 col-6 py-0">
+                                        <img src="https://d.newsweek.com/en/full/1565088/buttigieg-husband.webp?w=135&h=90&f=748dd76e9c1a35f1fb665e4d1ef9f8d5"
+                                            alt="" class="w-100">
+                                    </div>
+                                    <div class="col-xl-9 col-lg-8 col-md-8 col-sm-7 col-6 pl-0">
+                                        <div class="d-flex flex-column text-justify">
+                                            <span class="more-stories-link">
+                                                <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                                            </span>
+                                            <span class="more-stories-description mt-2">Lorem ipsum dolor sit amet
+                                                consectetur adipisicing elit. Magni,
+                                                molestias
+                                                deleniti provident sunt, iusto esse.
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <hr class="my-2 border border-top-0">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-5 col-6 py-0">
+                                        <img src="https://d.newsweek.com/en/full/1567582/tom-cotton.webp?w=135&h=90&f=21657cc1b166adefec2b8228748150e3"
+                                            alt="" class="w-100">
+                                    </div>
+                                    <div class="col-xl-9 col-lg-8 col-md-8 col-sm-7 col-6 pl-0">
+                                        <div class="d-flex flex-column text-justify">
+                                            <span class="more-stories-link">
+                                                <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                                            </span>
+                                            <span class="more-stories-description mt-2">Lorem ipsum dolor sit amet
+                                                consectetur adipisicing elit. Magni,
+                                                molestias
+                                                deleniti provident sunt, iusto esse.
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 pl-lg-0 order-md-3 order-sm-3 order-2 min-content-height sticky-top">
+                <aside id="opinion_box">
+                    <div class="row">
+                        <div class="col-sm-12 mt-4">
+                            <a href="#" class="title-box">
+                                <h6>OPINION</h6>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 d-flex flex-row pt-0 pb-0 mt-2">
+                            <img src="https://d.newsweek.com/en/full/1500975/sam-hill.png?w=63&amp;h=63&amp;f=608e92ee38c2b44188e64f7006592687"
+                                alt="sam" class="opinion-image">
+                            <div class=" d-flex flex-column pl-3 pr-3">
+                                <span class="opinion-link">
+                                    <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                                </span>
+                                <span class="opinion-author">
+                                    by SAM HILL
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <hr class="my-2 border border-top-0">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 d-flex flex-row pt-0 pb-0">
+                            <img src="https://d.newsweek.com/en/full/1577421/hank-gilman.png?w=63&amp;h=63&amp;f=f18b9a7364da071493072861d8b4448f"
+                                alt="Hank Gilman" class="opinion-image">
+                            <div class=" d-flex flex-column pl-3 pr-3">
+                                <span class="opinion-link">
+                                    <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                                </span>
+                                <span class="opinion-author">
+                                    by HANK GILMAN
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <hr class="my-2 border border-top-0">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 d-flex flex-row pt-0 pb-0">
+                            <img src="https://d.newsweek.com/en/full/1577573/danya-ruttenberg.png?w=63&amp;h=63&amp;f=bc22739040ad2eccd1323816369d37e8"
+                                alt="old man" class="opinion-image">
+                            <div class="d-flex flex-column pl-3 pr-3">
+                                <span class="opinion-link">
+                                    <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                                </span>
+                                <span class="opinion-author">
+                                    by DANYA RUTTENBERG
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <hr class="my-2 border border-top-0">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 d-flex flex-row pt-0 pb-0">
+                            <img src="https://d.newsweek.com/en/full/1561683/doug-gordon.png?w=63&amp;h=63&amp;f=2ee0e0bead2b09866ef97374e69a1501"
+                                alt="Doug Gordon" class="opinion-image">
+                            <div class=" d-flex flex-column pl-3 pr-3">
+                                <span class="opinion-link">
+                                    <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                                </span>
+                                <span class="opinion-author">
+                                    by DOUG GORDON
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+                <div id="The_Debate_box">
+                    <div class="row">
+                        <div class="col-sm-12 mt-4">
+                            <a href="#" class="title-box">
+                                <h6>THE DEBATE</h6>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row redborder">
+                        <div class="col-xl-5 col-lg-5 col-md-2 col-sm-5 col-6 py-0 mt-2">
+                            <img src="https://d.newsweek.com/en/full/1575781/joe-biden.jpg?w=95&amp;h=95&amp;f=326727fa24be15336b6173ba3187d344"
+                                alt="Joe Biden" class="joe">
+                            <span class="opinion-author pb-0">
+                                    BY <b>PETER ROFF</b>
+                                </span>
+                           </div>
+                        <div class="col-xl-7 col-lg-7 col-md-10 col-sm-7 col-6 pl-0 mt-2">
+                            <div class="d-flex flex-column">
+                                <span class="latest-news-link">
+                                    <a href="#">Biden's Running Mate Needs to Win Him an Entire State, Not Just a Constituency.</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                <div id="latest_news_box">
+                    <div class="row">
+                        <div class="col-sm-12 mt-4">
+                            <a href="#" class="title-box">
+                                <h6>LATEST NEWS</h6>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-5 col-lg-5 col-md-2 col-sm-5 col-6 py-0 mt-2">
+                            <img src="https://d.newsweek.com/en/full/1567626/glass-red-wine.webp?w=397&h=265&f=e505a072aeaaeb283a881ca4cf90eaa5"
+                                alt="" class="w-100">
+                        </div>
+                        <div class="col-xl-7 col-lg-7 col-md-10 col-sm-7 col-6 pl-0 mt-2">
+                            <div class="d-flex flex-column">
+                                <span class="latest-news-link">
+                                    <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <hr class="my-2 border border-top-0">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-5 col-lg-5 col-md-2 col-sm-5 col-6 py-0">
+                            <img src="https://d.newsweek.com/en/full/1567722/ryan-newman.webp?w=397&h=265&f=2e9dad957fbc97a9e68cc2795b1986a4"
+                                alt="" class="w-100">
+                        </div>
+                        <div class="col-xl-7 col-lg-7 col-md-10 col-sm-7 col-6 pl-0">
+                            <div class="d-flex flex-column">
+                                <span class="latest-news-link">
+                                    <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <hr class="my-2 border border-top-0">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-5 col-lg-5 col-md-2 col-sm-5 col-6 py-0">
+                            <img src="https://d.newsweek.com/en/full/1567721/ryan-newman-daytona-500-crash.webp?w=397&h=265&f=ac7fd2b37ee829059523ef3b68e7f609"
+                                alt="" class="w-100">
+                        </div>
+                        <div class="col-xl-7 col-lg-7 col-md-10 col-sm-7 col-6 pl-0">
+                            <div class="d-flex flex-column">
+                                <span class="latest-news-link">
+                                    <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <hr class="my-2 border border-top-0">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-5 col-lg-5 col-md-2 col-sm-5 col-6 py-0">
+                            <img src="https://d.newsweek.com/en/full/1567715/2020-daytona-500.webp?w=397&h=265&f=62e8603e8cb148aab83dd14423782db5"
+                                alt="" class="w-100">
+                        </div>
+                        <div class="col-xl-7 col-lg-7 col-md-10 col-sm-7 col-6 pl-0">
+                            <div class="d-flex flex-column">
+                                <span class="latest-news-link">
+                                    <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <hr class="my-2 border border-top-0">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-5 col-lg-5 col-md-2 col-sm-5 col-6 py-0">
+                            <img src="https://d.newsweek.com/en/full/1567648/food-diet-mediterranean-diet-healthy-vegetables-stockgetty.webp?w=397&h=265&f=344332ae602ed507fd7c44c3161b387c"
+                                alt="" class="w-100">
+                        </div>
+                        <div class="col-xl-7 col-lg-7 col-md-10 col-sm-7 col-6 pl-0">
+                            <div class="d-flex flex-column">
+                                <span class="latest-news-link">
+                                    <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <hr class="my-2 border border-top-0">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-5 col-lg-5 col-md-2 col-sm-5 col-6 py-0">
+                            <img src="https://d.newsweek.com/en/full/1567714/bill-de-blasio.webp?w=397&h=265&f=853a2988704188478040f8a9afebb233"
+                                alt="" class="w-100">
+                        </div>
+                        <div class="col-xl-7 col-lg-7 col-md-10 col-sm-7 col-6 pl-0">
+                            <div class="d-flex flex-column">
+                                <span class="latest-news-link">
+                                    <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <hr class="my-2 border border-top-0">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-5 col-lg-5 col-md-2 col-sm-5 col-6 py-0">
+                            <img src="https://d.newsweek.com/en/full/1559664/peter-weber.webp?w=397&h=265&f=0c7ab1e006f9393489865d06149571fd"
+                                alt="" class="w-100">
+                        </div>
+                        <div class="col-xl-7 col-lg-7 col-md-10 col-sm-7 col-6 pl-0">
+                            <div class="d-flex flex-column">
+                                <span class="latest-news-link">
+                                    <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div id="sponsored_insight_box_2">
+                    <div class="row">
+                        <div class="col-12 offset-md-4 col-md-4 offset-lg-0 col-lg-12 mt-4">
+                            <img src="https://d.newsweek.com/en/full/1559216/tokyo-my-city-chizu-nakamoto.jpg"
+                                alt="image 1" class="w-100">
+                            <div class="row">
+                                <div class="col-12">
+                                    <span class="sponsored-label">sponsored insight</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="border p-3">
+                                        <div class="section-link">
+                                            <a href="#">Female Entrepreneur Active in Tokyo and Uganda</a>
+                                        </div>
+                                        <div class="section-little-description">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
+                                            molestias
+                                            deleniti
+                                            provident sunt, iusto esse, velit totam eum accusamus beatae fugit
+                                            facere
+                                            adipisci.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="offset-2 offset-sm-3 offset-sm-4 offset-lg-1 offset-lg-1 col-lg-10 col-8 col-sm-6 col-md-4 col-lg-10 mt-4 p-3">
+                            <div id="sign_up_box_link"
+                                class="background-subscribe d-flex flex-column align-items-start border p-4">
+                                <div class="d-flex flex-row align-items-center">
+                                    <span class="n-icon"></span>
+                                    <h6 class="font-weight-bold m-0">SIGN UP FOR OUR NEWSLETTER</h6>
+                                </div>
+                                <a href="#" class="sign-up-gray px-3 py-1 my-2"><span>SIGN UP <i
+                                            class="fas fa-chevron-right"></i></span></a>
+                                <h6 class="update-pref"><a href="#">Update your preferences »</a></h6>
+                            </div>
+                        </div>
+
+                        <div class="col-12 offset-md-4 col-md-4 offset-lg-0 col-lg-12 mt-3">
+                            <img src="https://d.newsweek.com/en/full/1563375/delphian-school.jpg?w=343&h=229&f=57211d1eecaa562c8ca5d65049f35fda"
+                                alt="image 1" class="w-100">
+                            <div class="row">
+                                <div class="col-12">
+                                    <span class="sponsored-label">sponsored insight</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="border p-3">
+                                        <div class="section-link">
+                                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                                        </div>
+                                        <div class="section-little-description">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
+                                            molestias
+                                            deleniti
+                                            provident sunt, iusto esse, velit totam eum accusamus beatae fugit
+                                            facere
+                                            adipisci.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 offset-md-4 col-md-4 offset-lg-0 col-lg-12 mt-3">
+                            <img src="https://d.newsweek.com/en/full/1556493/ohio-northern-university-pettit-college-law.jpg?w=343&h=229&f=83cc4a2b96cbd472e102cf04f99fc5be"
+                                alt="image 1" class="w-100">
+                            <div class="row">
+                                <div class="col-12">
+                                    <span class="sponsored-label">sponsored insight</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="border p-3">
+                                        <div class="section-link">
+                                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                                        </div>
+                                        <div class="section-little-description">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
+                                            molestias
+                                            deleniti
+                                            provident sunt, iusto esse, velit totam eum accusamus beatae fugit
+                                            facere
+                                            adipisci.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 offset-md-4 col-md-4 offset-lg-0 col-lg-12 mt-3">
+                            <img src="https://d.newsweek.com/en/full/1550618/americas-most-responsible-companies-2020.jpg?w=343&h=229&f=228a31483952835462a9e24494fc24f7"
+                                alt="image 1" class="w-100">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="border p-3">
+                                        <div class="section-link">
+                                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                                        </div>
+                                        <div class="section-little-description">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
+                                            molestias
+                                            deleniti
+                                            provident sunt, iusto esse, velit totam eum accusamus beatae fugit
+                                            facere
+                                            adipisci.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="row mt-0 mb-0">
+            <div class="col-lg-3 col-md-3 col-sm-12 mt-3 mt-md-5 mt-lg-5">
+                <img src="https://d.newsweek.com/en/full/1577760/cover-april-10-2020.jpg?w=360&amp;h=480&amp;q=90&amp;f=d9f4bb8e8af64d4885c8c5f46de1d55c"
+                    alt="image 1" class="w-100">
+                <div class="row">
+                    <div class="col-12">
+                        <span class="epick-label">April 10 ISSUE</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <a href="#" class="col-12 see-all-label">
+                        <div class="p-2">SEE ALL FEATURES <i class="fas fa-chevron-right"></i></div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-9">
+                <div class="row">
+                    <div class="col-sm-12 pb-md-3 pb-lg-3 pb-xl-3">
+                        <div class="section-title">
+                            <span class="n-icon"></span>
+                            <h6>IN THE MAGAZINE</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-12 mt-3 mt-md-0 mt-lg-0">
+                        <img src="https://d.newsweek.com/en/full/1577311/remote-work-04.jpg?w=466&amp;h=311&amp;q=90&amp;f=f2840ff6913f357ddffea7af291afbb5"
+                            alt="image 2" class="w-100" width="466" height="250">
+                        <div class="row itmi-category">
+                            <div class="col-sm-12">
+                                <span class="itmi-label">Category</span>
+                                <span>Topic</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="section-link">
+                                    <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 mt-3 mt-md-0 mt-lg-0">
+                        <img src="https://d.newsweek.com/en/full/1575814/us-unemployment-jobs-economy-recession-coronavirus.jpg?w=466&amp;h=311&amp;l=45&amp;t=50&amp;q=90&amp;f=b0d045a877b5f16cdc9e995f12048831"
+                            alt="image 3" class="w-100" width="466" height="250" >
+                        <div class="row itmi-category">
+                            <div class="col-sm-12">
+                                <span class="itmi-label">Category</span>
+                                <span>Topic</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="section-link">
+                                    <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 mt-3 mt-md-0 mt-lg-0">
+                        <img src="https://d.newsweek.com/en/full/1573813/us-president-donald-trump.jpg?w=466&amp;h=311&amp;q=90&amp;f=26d109052f04be260abb7772c12b4686"
+                        width="466" height="250" alt="image 4" class="w-100">
+                        <div class="row itmi-category">
+                            <div class="col-sm-12">
+                                <span class="itmi-label">Category</span>
+                                <span>Topic</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="section-link">
+                                    <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12 mt-3">
+                <img src="https://d.newsweek.com/en/full/1565860/per-passwords-02.webp?w=466&h=311&q=90&f=ca3c6feae9effd6ddce1402a7d792d7e"
+                    alt="image 5" class="w-100">
+                <div class="row itmi-category">
+                    <div class="col-sm-12">
+                        <span class="itmi-label">Category</span>
+                        <span>Topic</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="section-link">
+                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12 mt-3">
+                <img src="https://d.newsweek.com/en/full/1566195/cul-books-01-578945297-banner.webp?w=466&h=311&l=53&t=47&q=90&f=d8682f476870a28f6620f166adf5cc92"
+                    alt="image 6" class="w-100">
+                <div class="row itmi-category">
+                    <div class="col-sm-12">
+                        <span class="itmi-label">Category</span>
+                        <span>Topic</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="section-link">
+                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12 mt-3">
+                <img src="https://d.newsweek.com/en/full/1576924/cul-ps-reedus.jpg?w=466&amp;h=311&amp;q=90&amp;f=d7a14743a452631b3d9390e961866f63"
+                    alt="image 7" class="w-100">
+                <div class="row itmi-category">
+                    <div class="col-sm-12">
+                        <span class="itmi-label">Category</span>
+                        <span>Topic</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="section-link">
+                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12 mt-3 mb-3">
+                <img src="https://d.newsweek.com/en/full/1566164/fighting-back.webp?w=480&h=320&l=50&t=38&q=90&f=5b4d8c2fbabbe658d0eca206d3951c17"
+                    alt="image 8" class="w-100">
+                <div class="row itmi-category">
+                    <div class="col-sm-12">
+                        <span class="itmi-label">Category</span>
+                        <span>Topic</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="section-link">
+                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="row mt-0 mb-0">
+            <div class="col-sm-12 pb-md-3 pb-lg-3 pb-xl-3">
+                <div class="section-title">
+                    <span class="n-icon"></span>
+                    <h6>EDITOR'S PICK</h6>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mt-3 mt-md-0 mt-lg-0">
+                <img src="https://d.newsweek.com/en/full/1578835/building-damaged-earthquake-march-18-2020-magna-utah.jpg?w=397&amp;h=295&amp;f=2356a401e04521cd73ca5014b731d5c5"
+                    alt="image 1" class="w-100">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <span class="epick-label">TECH & SCIENCE</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="section-link">
+                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                        </div>
+                        <div class="section-little-description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, molestias deleniti
+                            provident sunt, iusto esse, velit totam eum accusamus beatae fugit facere adipisci.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mt-3 mt-md-0 mt-lg-0">
+                <img src="https://d.newsweek.com/en/full/1578843/sun-corona.jpg?w=397&amp;h=295&amp;f=5dd0d33cc81f0af03c88a67fe1735a35"
+                    alt="image 2" class="w-100">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <span class="epick-label">TECH & SCIENCE</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="section-link">
+                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                        </div>
+                        <div class="section-little-description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, molestias deleniti
+                            provident sunt, iusto esse, velit totam eum accusamus beatae fugit facere adipisci.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mt-3 mt-md-0 mt-lg-0">
+                <img src="https://d.newsweek.com/en/full/1567603/white-house-senior-advisor-stephen-miller-l-katie-waldma.webp?w=397&h=265&f=5fe897b8d7624b367b0efd2af81bafdf"
+                    alt="image 3" class="w-100">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <span class="epick-label">Category</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="section-link">
+                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                        </div>
+                        <div class="section-little-description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, molestias deleniti
+                            provident sunt, iusto esse, velit totam eum accusamus beatae fugit facere adipisci.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mt-3 mt-md-0 mt-lg-0">
+                <img src="https://d.newsweek.com/en/full/1578712/new-york-governor-andrew-cuomo.jpg?w=397&amp;h=295&amp;f=84e3941e0da89a23b0ae1f9824c261bb"
+                    alt="image 4" class="w-100">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <span class="epick-label">U.S.</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="section-link">
+                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                        </div>
+                        <div class="section-little-description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, molestias deleniti
+                            provident sunt, iusto esse, velit totam eum accusamus beatae fugit facere adipisci.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mt-3">
+                <img src="https://d.newsweek.com/en/full/1567617/ice-covers-lake-michigans-shoreline.webp?w=397&h=265&f=db797a467425a7cac1cc4b5213b98d54"
+                    alt="image 5" class="w-100">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <span class="epick-label">Category</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="section-link">
+                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                        </div>
+                        <div class="section-little-description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, molestias deleniti
+                            provident sunt, iusto esse, velit totam eum accusamus beatae fugit facere adipisci.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mt-3">
+                <img src="https://d.newsweek.com/en/full/1567350/climate-protest-london.webp?w=397&h=265&f=7da37dbaa2f5693eed135c2de561d7b0"
+                    alt="image 6" class="w-100">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <span class="epick-label">Category</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="section-link">
+                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                        </div>
+                        <div class="section-little-description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, molestias deleniti
+                            provident sunt, iusto esse, velit totam eum accusamus beatae fugit facere adipisci.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mt-3">
+                <img src="https://d.newsweek.com/en/full/1567488/alexander-vindman.webp?w=397&h=265&f=9c885b90fe041f4460b0920555d94775"
+                    alt="image 7" class="w-100">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <span class="epick-label">Politics</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="section-link">
+                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                        </div>
+                        <div class="section-little-description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, molestias deleniti
+                            provident sunt, iusto esse, velit totam eum accusamus beatae fugit facere adipisci.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mt-3 mb-3">
+                <img src="https://d.newsweek.com/en/full/1578569/donald-trump.jpg"
+                    alt="image 8" class="w-100">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <span class="epick-label">U.S.</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="section-link">
+                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                        </div>
+                        <div class="section-little-description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, molestias deleniti
+                            provident sunt, iusto esse, velit totam eum accusamus beatae fugit facere adipisci.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="row mt-0 mb-0">
+            <div class="col-sm-12 pb-md-3 pb-lg-3 pb-xl-3">
+                <div class="section-title">
+                    <span class="n-icon box-shadow"></span>
+                    <h6>FEATURED SLIDESHOWS</h6>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12 mt-3 mt-md-0 mt-lg-0">
+                <img src="https://d.newsweek.com/en/full/1560097/tozeur-tunisia.webp?w=397&h=265&f=69a77ef1bd7e21c060a7b7685b05a73d"
+                    alt="image 1" class="w-100">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <span class="featured-slideshow-label">11</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="section-link">
+                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12 mt-3 mt-md-0 mt-lg-0">
+                <img src="https://d.newsweek.com/en/full/1552749/eyjafjallajokull-iceland.webp?w=397&h=265&f=ea1ffc67b32c527ef435529cb5bd2dc6"
+                    alt="image 2" class="w-100">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <span class="featured-slideshow-label">18</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="section-link">
+                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12 mt-3 mt-md-0 mt-lg-0">
+                <img src="https://d.newsweek.com/en/full/1547486/lipschutz-living-room-hotel-chelsea.webp?w=397&h=265&f=fb4270bf5fbc2591cc43d24d0377621d"
+                    alt="image 3" class="w-100">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <span class="featured-slideshow-label">12</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="section-link">
+                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="row mt-0 mb-0">
+            <div class="col-sm-12">
+                <hr class="border border-top-0">
+            </div>
+            <div class="col-sm-12">
+                <h6 class="category-title">U.S.
+                </h6>
+            </div>
+            <div class="col-md-4 col-sm-12 mt-3 mt-md-0 mt-lg-0">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <img src="https://d.newsweek.com/en/full/1578901/coronavirus-pandemic-causes-climate-anxiety-changing-routines-america.jpg?w=397&amp;h=265&amp;f=4bb9a7a0344d0f9041f0d6feac90b7bd"
+                            alt="image 1" class="w-100">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="section-link">
+                            <a href="#">Social Distancing Cut Coronavirus Cases in Oregon By Up to 70 Percent</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12 mt-3 mt-md-0 mt-lg-0">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <img src="https://d.newsweek.com/en/full/1578857/deportation-flight.jpg?w=397&amp;h=265&amp;l=0&amp;t=0&amp;f=cbd026dc2ea1cf124bbf0b49f83d10ee"
+                            alt="image 2" class="w-100">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="section-link">
+                            <a href="#">ICE Brings Nearly 700 Americans Back Home on Returning Deportation Flights</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12 mt-3 mt-md-0 mt-lg-0">
+                <div class="row">
+                    <div class="col-sm-12 d-flex flex-row pt-0 pb-0">
+                        <img src="https://d.newsweek.com/en/full/1567696/american-black-bear.webp?w=135&h=90&f=2e617b5570ad717b2a4fe0326138d98b"
+                            alt="" class="secondary-latest-news">
+                        <span class="sm-section-link">
+                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <hr class="my-2 border border-top-0">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 d-flex flex-row pt-0 pb-0">
+                        <img src="https://d.newsweek.com/en/full/1567688/donald-trump-melania-trump.webp?w=135&h=90&f=f6fdea34321a550baa01db08c344affd"
+                            alt="" class="secondary-latest-news">
+                        <span class="sm-section-link">
+                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <hr class="my-2 border border-top-0">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 d-flex flex-row pt-0 pb-0">
+                        <img src="https://d.newsweek.com/en/full/1567675/donald-trump-jr-book-signing.webp?w=135&h=90&f=62a2f5951777e6190d75e64b87624fec"
+                            alt="" class="secondary-latest-news">
+                        <span class="sm-section-link">
+                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <hr class="border border-top-0">
+            </div>
+        </section>
+        <section class="row mt-0 mb-0">
+            <div class="col-sm-12">
+                <h6 class="category-title">World
+                </h6>
+            </div>
+            <div class="col-md-4 col-sm-12 mt-3 mt-md-0 mt-lg-0">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <img src="https://d.newsweek.com/en/full/1578753/coronavirus-us.jpg?w=397&amp;h=265&amp;f=17455880bad9298ffd0fd323b184543f"
+                            alt="image 1" class="w-100">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="section-link">
+                            <a href="#">More Coronavirus Cases in U.S. Than Italy and Spain Combined</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12 mt-3 mt-md-0 mt-lg-0">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <img src="https://d.newsweek.com/en/full/1578633/coronavirus-death-funeral-ceremony-italy-march-2020.jpg?w=397&amp;h=265&amp;f=73c6daa0e54d391bf46624347659247c"
+                            alt="image 2" class="w-100">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="section-link">
+                            <a href="#">Coronavirus Has Killed More Than 50,000 People Around the World</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12 mt-3 mt-md-0 mt-lg-0">
+                <div class="row">
+                    <div class="col-sm-12 d-flex flex-row pt-0 pb-0">
+                        <img src="https://d.newsweek.com/en/full/1567640/statista-coronavirus-cases-covid-19-2019ncov.webp?w=135&h=90&f=63ed3eb2766f811ead1c090409c3fe4f"
+                            alt="" class="secondary-latest-news">
+                        <span class="sm-section-link">
+                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <hr class="my-2 border border-top-0">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 d-flex flex-row pt-0 pb-0">
+                        <img src="https://d.newsweek.com/en/full/1567666/uae-yemen-assassination-mercenaries-us.webp?w=135&h=90&f=5e23a22d8b8cce79a4cf697605fd1199"
+                            alt="" class="secondary-latest-news">
+                        <span class="sm-section-link">
+                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <hr class="my-2 border border-top-0">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 d-flex flex-row pt-0 pb-0">
+                        <img src="https://d.newsweek.com/en/full/1567616/tallebudgera-australia-january-2016.webp?w=135&h=90&f=6a95e3a4c76724b65b1445fe2825cb4c"
+                            alt="" class="secondary-latest-news">
+                        <span class="sm-section-link">
+                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <hr class="border border-top-0">
+            </div>
+        </section>
+        <section class="row mt-0 mb-0">
+            <div class="col-sm-12">
+                <h6 class="category-title">Business
+                </h6>
+            </div>
+            <div class="col-md-4 col-sm-12 mt-3 mt-md-0 mt-lg-0">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <img src="https://d.newsweek.com/en/full/1576462/geekey-tool.jpg?w=397&amp;h=265&amp;f=d70e57ba430b23e5bbdfa4a85d37df6e"
+                            alt="image 1" class="w-100">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="section-link">
+                            <a href="#">The Best April Deals and Sales in Outdoor, Toys & Games and More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12 mt-3 mt-md-0 mt-lg-0">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <img src="https://d.newsweek.com/en/full/1578135/oil-donald-trump-coronavirus-russia-saudi-arabia.jpg?w=397&amp;h=265&amp;f=68aa7ffaedd5088cfd3f1c196001f6ab"
+                            alt="image 2" class="w-100">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="section-link">
+                            <a href="#">Trump Says Russia and Saudi Arabia Are Discussing End to Oil Price War</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12 mt-3 mt-md-0 mt-lg-0">
+                <div class="row">
+                    <div class="col-sm-12 d-flex flex-row pt-0 pb-0">
+                        <img src="https://d.newsweek.com/en/full/1566186/trump-2021-budget-proposal-blasted.webp?w=135&h=90&f=f0168baca1ddca12738cc0625418641f"
+                            alt="" class="secondary-latest-news">
+                        <span class="sm-section-link">
+                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <hr class="my-2 border border-top-0">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 d-flex flex-row pt-0 pb-0">
+                        <img src="https://d.newsweek.com/en/full/1566028/birds-prey-box-office.webp?w=135&h=90&f=8c3d5591a7330115a25b25489fd75617"
+                            alt="" class="secondary-latest-news">
+                        <span class="sm-section-link">
+                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <hr class="my-2 border border-top-0">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 d-flex flex-row pt-0 pb-0">
+                        <img src="https://d.newsweek.com/en/full/1565399/hbo-max.webp?w=135&h=90&l=19&t=50&f=07291bce4346c9abc165559336510fe0"
+                            alt="" class="secondary-latest-news">
+                        <span class="sm-section-link">
+                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <hr class="border border-top-0">
+            </div>
+        </section>
+        <section class="row mt-0 mb-0">
+            <div class="col-sm-12">
+                <h6 class="category-title">Tech &amp; Science
+                </h6>
+            </div>
+            <div class="col-md-4 col-sm-12 mt-3 mt-md-0 mt-lg-0">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <img src="https://d.newsweek.com/en/full/1578890/steel-factory-greenhouse-gas-emissions.jpg?w=397&amp;h=265&amp;f=b483f0915bce08958c0b940e4ac46215"
+                            alt="image 1" class="w-100">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="section-link">
+                            <a href="#">COVID-19 Pandemic Could Lead to Fall in CO2 Not Seen Since the End of WWII.</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12 mt-3 mt-md-0 mt-lg-0">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <img src="https://d.newsweek.com/en/full/1578899/twitter.jpg?w=397&amp;h=265&amp;f=11011f011f9420717bbad40d76d05669"
+                            alt="image 2" class="w-100">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="section-link">
+                            <a href="#">Twitter Purges Bot Account Network that Used Coronavirus in its Propaganda.</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12 mt-3 mt-md-0 mt-lg-0">
+                <div class="row">
+                    <div class="col-sm-12 d-flex flex-row pt-0 pb-0">
+                        <img src="https://d.newsweek.com/en/full/1504730/asteroid.webp?w=135&h=90&f=204fdedb4e70f3a475bcc83f99299879"
+                            alt="" class="secondary-latest-news">
+                        <span class="sm-section-link">
+                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <hr class="my-2 border border-top-0">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 d-flex flex-row pt-0 pb-0">
+                        <img src="https://d.newsweek.com/en/full/1567314/solar-system.webp?w=135&h=90&f=9d92c4028ebb4856f671f017cceab02c"
+                            alt="" class="secondary-latest-news">
+                        <span class="sm-section-link">
+                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <hr class="my-2 border border-top-0">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 d-flex flex-row pt-0 pb-0">
+                        <img src="https://d.newsweek.com/en/full/1567283/honey-bee.webp?w=135&h=90&f=544312fcef69008d69fc2a389c26b2e5"
+                            alt="" class="secondary-latest-news">
+                        <span class="sm-section-link">
+                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <hr class="border border-top-0">
+            </div>
+        </section>
+        <section class="row mt-0 mb-0">
+            <div class="col-sm-12">
+                <h6 class="category-title">Culture
+                </h6>
+            </div>
+            <div class="col-md-4 col-sm-12 mt-3 mt-md-0 mt-lg-0">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <img src="https://d.newsweek.com/en/full/1578906/gandia-money-heist.jpg?w=397&amp;h=265&amp;l=35&amp;t=23&amp;f=9f260f37265fca8cc0d2c79d65d87331"
+                            alt="image 1" class="w-100">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="section-link">
+                            <a href="#">'Money Heist' Part 4: Meet Major New Villain Gandía.</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12 mt-3 mt-md-0 mt-lg-0">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <img src="https://d.newsweek.com/en/full/1578911/drake.jpg?w=397&amp;h=265&amp;f=2c4ed5fb9d2016e51f0ceb9d61a6e4aa"
+                            alt="image 2" class="w-100">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="section-link">
+                            <a href="#">What Is Drake's Tootsie Slide Challenge on TikTok?</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12 mt-3 mt-md-0 mt-lg-0">
+                <div class="row">
+                    <div class="col-sm-12 d-flex flex-row pt-0 pb-0">
+                        <img src="https://d.newsweek.com/en/full/1567703/caroline-flack.webp?w=135&h=90&f=663af74289c7d10ff6d923cd98cf38d9"
+                            alt="" class="secondary-latest-news">
+                        <span class="sm-section-link">
+                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <hr class="my-2 border border-top-0">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 d-flex flex-row pt-0 pb-0">
+                        <img src="https://d.newsweek.com/en/full/1567659/ikea-filter.webp?w=135&h=90&f=aa587eb74145bd931802d10a8e82813e"
+                            alt="" class="secondary-latest-news">
+                        <span class="sm-section-link">
+                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <hr class="my-2 border border-top-0">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 d-flex flex-row pt-0 pb-0">
+                        <img src="https://d.newsweek.com/en/full/1567657/bts-grammy-awards-2020.webp?w=135&h=90&f=42db670fb2f094dbddb8587e0f2e6261"
+                            alt="" class="secondary-latest-news">
+                        <span class="sm-section-link">
+                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <hr class="border border-top-0">
+            </div>
+        </section>
+        <section class="row mt-0 mb-0">
+            <div class="col-sm-12">
+                <h6 class="category-title">Sports
+                </h6>
+            </div>
+            <div class="col-md-4 col-sm-12 mt-3 mt-md-0 mt-lg-0">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <img src="https://d.newsweek.com/en/full/1578841/evan-gattis-jose-altuve-houston-astros.jpg?w=397&amp;h=265&amp;f=5c037735b2e6daf904c0f9d1ba965720"
+                            alt="image 1" class="w-100">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="section-link">
+                            <a href="#">Former Houston Astros Player Says Team Deserves Its Reputation as Cheaters</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12 mt-3 mt-md-0 mt-lg-0">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <img src="https://d.newsweek.com/en/full/1578831/nfl-coronavirus.jpg?w=397&amp;h=265&amp;f=128bbcbaebc53837cf2dae056d2c651d"
+                            alt="image 2" class="w-100">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="section-link">
+                            <a href="#">NFL Season Won't Start 'If One Player is Positive' for Coronavirus.</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12 mt-3 mt-md-0 mt-lg-0">
+                <div class="row">
+                    <div class="col-sm-12 d-flex flex-row pt-0 pb-0">
+                        <img src="https://d.newsweek.com/en/full/1567620/joel-embiid-anthony-davis-nba-all-star-game.webp?w=135&h=90&f=dcadadb6273fbca63dfd5da4425af8f7"
+                            alt="" class="secondary-latest-news">
+                        <span class="sm-section-link">
+                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <hr class="my-2 border border-top-0">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 d-flex flex-row pt-0 pb-0">
+                        <img src="https://d.newsweek.com/en/full/1567610/lebron-james-los-angeles-lakers.webp?w=135&h=90&f=3c59ec56621b29e5c7d1c794e4b6303d"
+                            alt="" class="secondary-latest-news">
+                        <span class="sm-section-link">
+                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <hr class="my-2 border border-top-0">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 d-flex flex-row pt-0 pb-0">
+                        <img src="https://d.newsweek.com/en/full/1567595/jennifer-hudson.webp?w=135&h=90&f=fe4f1732191c3ec9eace18f425c3a125"
+                            alt="" class="secondary-latest-news">
+                        <span class="sm-section-link">
+                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <hr class="border border-top-0">
+            </div>
+        </section>
+        <section class="row mt-4 mb-0">
+            <div class="col-xl-8 col-lg-8 col-12">
+                <div class="row">
+                    <div class="col-12">
+                        <h6 class="category-title">SUBSCRIBE
+                        </h6>
+                    </div>
+                </div>
+                <div class="background-subscribe d-flex flex-column flex-md-row flex-lg-row flex-xl-row">
+                    <div class="d-flex flex-column justify-content-center align-items-center subscribe-images">
+                        <img src="https://d.newsweek.com/en/full/1576902/april-03-2020-cover.jpg?w=170&amp;q=95&amp;f=e7b6af0ef76e162727acd0141bfc2e8a"
+                            alt="image 1" class="subscribe-image-prev p-4">
+                        <img src="https://d.newsweek.com/en/full/1577760/cover-april-10-2020.jpg?w=170&amp;q=95&amp;f=a4b41b48dc29ccde5be9091db89cdf35"
+                            alt="image 2" class="subscribe-image-current p-4">
+                    </div>
+                    <div
+                        class="d-flex flex-column justify-content-center align-items-center align-items-md-start text-center text-md-left">
+                        <span class="section-link mx-3">
+                            <a href="#">In-depth Stories You Don't See Elsewhere About Topics You Want to Read!</a>
+                        </span>
+                        <span class="section-little-description mx-3">
+                            All Access + Weekly Delivery.
+                           <br>Choose A Membership That's Perfect for You!
+                        </span>
+                        <span class="sign-in-label bg-red m-3"><a href="#">SUBSCRIBE<i class="fas fa-chevron-right"></i></a></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-12 mt-4 mt-lg-0">
+                <div class="row">
+                    <div class="col-12">
+                        <h6 class="category-title">NEWSLETTER</h6>
+                    </div>
+                </div>
+                <div class="border d-flex flex-column flex-md-row flex-lg-row flex-xl-row">
+                    <div>
+                        <img src="https://d.newsweek.com/en/full/1541302/starting5-homepage.png?w=397&amp;h=265&amp;q=90&amp;f=742bce9a6f72dd8f19ba2e7fd5db06e5" alt="image 2"
+                            class="newsletter-image" style="background: url(&quot;https://d.newsweek.com/en/full/1541302/starting5-homepage.png?w=397&amp;h=265&amp;q=90&amp;f=742bce9a6f72dd8f19ba2e7fd5db06e5&quot;) center center / cover no-repeat;">
+                    </div>
+                    <div
+                        class="d-flex flex-column justify-content-center align-items-center align-items-md-start text-center text-md-left">
+                        <span class="section-link mx-3">
+                            <a href="#">The Starting 5</a>
+                        </span>
+                        <span class="section-little-description mx-3">
+                            See why nearly a quarter of a million subscribers begin their day with the Starting 5.
+                        </span>
+                        <span class="sign-in-label bg-red m-3"><a href="#">SIGN UP <i
+                                    class="fas fa-chevron-right"></i></a></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer contfluid">
+        <div class="liner">
+            <div class="mt-3">
+                <div class="w-100 d-fl flex-column align-items-start flex-md-row align-items-md-end justify-content-md-between">
+                    <div class="d-fl align-items-start flex-column flex-md-row align-items-md-end">
+                        <img class="logo-footer" src="img/logo-footer.png" alt="logo">
+                        <small class="ml-3">© 2020 NEWSWEEK</small>
+                    </div>
+                    <div class="ml-3">
+                        <div class="social">
+                            <i class="fab fa-facebook-square fa-2x"></i>
+                            <i class="fab fa-twitter fa-2x"></i>
+                            <i class="fab fa-instagram fa-2x"></i>
+                            <i class="fab fa-tumblr fa-2x"></i>
+                            <i class="fab fa-linkedin-in fa-2x"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-links">
+            <div class="cool editions-links d-fl">
+                <strong>&nbsp;&nbsp;Editions:</strong>
+                <a href="https://www.newsweek.com/">U.S. Edition</a>
+                <a href="https://www.newsweekjapan.jp/">日本</a>
+                <a href="http://newsweekpakistan.com/">Pakistan</a>
+                <a href="https://www.newsweek.pl/">Polska</a>
+                <a href="https://newsweek.ro/">România</a>
+            </div>
+            <div class="cool footer-general-links d-fl">
+                <a href="https://www.newsweek.com/about-newsweek">About Us</a>
+                <a href="https://www.newsweek.com/corrections">Corrections</a>
+                <a href="https://www.newsweek.com/contact">Contact Us</a>
+                <a href="https://www.newsweek.com/editorial-guidelines">Editorial Guidelines</a>
+                <a href="https://www.newsweek.com/editorial-guidelines">Copyright</a>
+                <a href="https://www.newsweek.com/copyright">Advertise</a>
+                <a href="https://www.newsweek.com/terms-service">Terms & Conditions</a>
+                <a href="https://www.newsweek.com/privacy-policy">Privacy Policy</a>
+                <a href="https://www.newsweek.com/cookie-policy">Cookie Policy</a>
+                <a href="https://www.newsweek.com/terms-sale">Terms of Sale</a>
+                <a href="https://www.newsweek.com/archive">Archive</a>
+                <a href="https://www.newsweek.com/announcements">Announcements</a>
+                <a href="javascript:Didomi.preferences.show()">Consent preferences</a>
+            </div>
+           </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="script.js"></script>
 </body>
 </html>

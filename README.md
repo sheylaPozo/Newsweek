@@ -6,11 +6,11 @@ This project is been built with bootstrap, Html 5 and CSS cloning the Newsweek w
 
 - HTML
 - CSS
--BOOTSTRAP
+- BOOTSTRAP
 
 ---
 
-[Example](http://archive.ph/UzasM)
+[Example](http://archive.vn/VF9h9)
 
 ### Live Demo
 
